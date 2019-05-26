@@ -1,3 +1,3 @@
-INSERT INTO burgers (name,devoured)VALUES("Whopper",true);
-INSERT INTO burgers (name,devoured)VALUES("Big Mac",true);
-INSERT INTO burgers (name,devoured)VALUES("Double",true);
+INSERT INTO burgers (name,devoured)VALUES("Whopper",false);
+INSERT INTO burgers (name,devoured)VALUES("Big Mac",false);
+INSERT INTO burgers (name,devoured)VALUES("Double",false);
