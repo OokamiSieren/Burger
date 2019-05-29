@@ -4,13 +4,13 @@ $(function() {
     var id = $(this).data("id");
     var toDevour = $(this).data("devoured");
     var wasDevoured = {
-      devoured: toDevour
+      devoured: true
     };
     $.ajax("api/burgers/" + id, {
       type: "PUT",
       data: wasDevoured
     }).then(function() {
-      console.log("changed devoured to", toDevour);
+      console.log("changed devour to", toDevour);
       location.reload();
     });
   });
@@ -21,9 +21,9 @@ $(function() {
       name: $("#bur")
         .val()
         .trim(),
-      devoured: $("[name=devoured]:checked")
-        .val()
-        .trim()
+      // devoured: $("[name=devoured]:checked")
+      //   .val()
+      //   .trim()
     };
     $.ajax("/api/burgers", {
       type: "POST",
