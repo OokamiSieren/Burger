@@ -8,11 +8,11 @@
   <div class="col-6">
 <ul>
   {{#each burgers}}
-  {{#unless Devoured}}
+  {{#unless devoured}}
   <li>
     <p>
       {{this.id}}. {{this.burger_name}}
-      <button data-burgersid="{{this.id}}" class="devoured">Devour it!</button>
+      <button data-id="{{this.id}}" class="devoured">Devour it!</button>
     </p>
   </li>
   {{/unless}}
@@ -24,7 +24,7 @@
 
 <ul>
   {{#each burgers}}
-  {{#if Devoured}}
+  {{#if devoured}}
   <li>
     <p>
       {{this.id}}. {{this.burger_name}}
