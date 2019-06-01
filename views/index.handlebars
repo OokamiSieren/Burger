@@ -1,11 +1,16 @@
 <div class="container">
-<h1>Burgers!</h1>
-<hr>
 
-<h2>Here are some burgers:</h2>
+  <div class="jumbotron" id="jumbo">
+<h1 class="text-center"><span class="fas fa-hamburger"></span> Burgers!</h1>
+<hr>
+</div>
+
+<h2>Here are some Burgers:</h2>
 <hr>
 <div class="row">
   <div class="col-6">
+    <h3>Not Eaten:</h3>
+    <hr>
 <ul>
   {{#each burgers}}
   {{#unless devoured}}
@@ -19,8 +24,10 @@
   {{/each}}
 </ul>
 </div>
+
 <div class="col-6">
   <h3>Devoured! Yum!</h3>
+  <hr>
 
 <ul>
   {{#each burgers}}
@@ -35,10 +42,11 @@
 </ul>
 </div>
 </div>
-
 <div class="row">
   <div class="col-12">
-<h3>Add a Burger</h3>
+    <hr>
+<h3>Add a Burger:</h3>
+<hr>
 <form class="create-form">
 
   <div class="form-group">
@@ -46,14 +54,10 @@
     <input type="text" id="bur" name="name">
   </div>
 
-  {{!-- <div class="form-group">
-    <label for="dev">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1"> Devoured<br>
-    <input type="radio" name="notDevoured" value="0"> Not Devoured
-  </div> --}}
 
   <button type="submit">Add Burger</button>
 </form>
 </div>
 </div>
 </div>
+
